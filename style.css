@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgb(25, 25, 25);
+}
+
+h1 {
+    border-right: 2px solid rgba(255, 255,255 , .75);
+   text-align: center;
+   white-space: nowrap;
+   overflow: hidden;
+   font-family: sans-serif;
+   background: linear-gradient(to right, #f887ff, #de004e,#08dee0);
+   -webkit-text-fill-color: transparent;    
+   -webkit-background-clip: text;
+   box-shadow: 0 0 2px rgb(49, 49, 49);
+}
+/* 
+   background: linear-gradient(to bottom , #af43be, #fd8090, #c4ffff, #08dee0, #1261d1);
+background: linear-gradient(to right, #f887ff, #de004e, #860029, #321450, #29132e); 
+   background: linear-gradient(to right, #7700a6, #fe00fe, #defe47, #00b3f3, #0016ee);
+*/
+.typing-animation{
+    animation: blinkCursor 500ms infinite normal,
+    typing 5s steps(40) 1s normal both;
+}
+
+@keyframes typing{
+    from{
+        width: 0;
+    }
+    to{
+        width: 14em;
+    }
+}
+@keyframes blinkCursor{
+    from{
+        border-right-color: 2px solid rgba(255, 255,255 , .75);
+    }
+
+    to {
+        border-right: transparent;
+    }
+}
