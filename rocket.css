@@ -19,34 +19,25 @@ i{
     position: absolute;
     top: -250px;
     background:  linear-gradient(transparent, #a945c7);
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.3), 0 0 29px #eb14ff;
     animation: animateStars linear infinite;    
-}
-
-@keyframes upRocket{
-    0%{
-        animation: animate 0.2s ease infinite;
-    }
-    100%{
-        transition-duration: 3s;
-        top: -30vh;
-    }
 }
 
 @keyframes animateStars {
     0%{
         transform: translateY(0);
     }
+    
     100%{
-        transform: translateY(200vh);
+       transform: translateY(200vh); 
     }
 }
 
-.scene .rocket{
+/* .scene .rocket{
     position: relative;
-    animation: animate 10s 1s normal; /* 0.2s  é o tempo original*/
-    /*animation: upRocket 4s 2s linear ; tentar fazer o foguete subir*/
+    animation: animate 0.2s 1s normal infinite;
 }
-/* @keyframes animate {
+@keyframes animate {
         0%,100%{
             transform: translateY(-2px);
         }
@@ -54,24 +45,32 @@ i{
             transform: translateY(2px);
         }
 
-}  animação original*/
+} /* animação original*/
+
+
+.scene .rocket{
+    position: relative;
+    animation: animate 10s 1s normal;
+}
 
 @keyframes animate {
     0%{
-        transform: translateY(1px);
+        transform: translateY(500px);
     }
-    50%{
-        transform: translateY(-200px)      
+    50%,54%,58%,62%,66%,70%,74%,78%{
+        transform: translateY(-50px)      
     }
-
-    80%{
+    52%,56%,60%,64%,68%,72%,76%{
+        transform: translateY(-54px);
+    }  
+    90%{
         transform: rotateZ(-50deg); 
     }
     100%{
         transform:  translate(-100vw, -100vh); /*isso diacho*/
     }
-
 }
+
 .scene .rocket::before{
     content: '';
     position: absolute;
