@@ -1,28 +1,24 @@
 function stars(){
     let count = 150;
     let scene = document.querySelector('.scene');
-    let i =0;
+    let i = 0;
     while(i < count){
         let star = document.createElement('i');
         let x = Math.floor(Math.random() * window.innerWidth);
-        let duration = Math.random() * 1;
+        let duration = Math.random() * 25;
         let h = Math.random() * 100;
 
         star.style.left = x + 'px';
-        star.style.width = 2 + 'px';
+        star.style.width = 1 + 'px';
         star.style.height = 40 + 'px';
         star.style.animationDuration = duration + 's';
         
-        scene.appendChild(star);
+        scene.appendChild(star);//adiciona star dentro de scene
         i++;
 
-     
-            setTimeout(() => { star.style.background = "white"}, 0500);
-            setTimeout(() => { star.style.background+ "yellow"}, 1000); // setTime funcionando, só falta fazer a animação direito
-            setTimeout(() => { star.style.background= "cyan"}, 1000);
-            setTimeout(() => { star.style.background = "green"}, 1500);
-            setTimeout(() => { star.style.background= "#321450"}, 2000); 
-
+            setTimeout(() => { star.style.animationDuration = Math.random() * 1 + 's';}, 1700);
+            setTimeout(() => { star.style.animationDuration = Math.random() * 50 + 's';}, 5000);
+            setTimeout(() => { star.style.animationDuration = Math.random() * 500 + 's';}, 8000);
     }
 }
 
