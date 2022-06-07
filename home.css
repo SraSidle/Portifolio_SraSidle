@@ -1,14 +1,14 @@
 .home{
     background-color: rgb(10, 10, 10);
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     color: #f1b;
 }
 
 header{
     display: flex;
     flex-direction: column;
-    padding: 3rem;
+    padding: 1rem 3rem;
 }
 
 nav{
@@ -41,10 +41,50 @@ li{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 
 .foto{
     width: 10rem;
     border-radius: 50%;
+}
+
+.sobre-eu{
+    margin: 5% 10%;
+    padding: 1rem;
+}
+
+h3{
+    text-align: center;
+    margin-bottom: 0.7rem;
+}
+
+#projetos{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#skills{
+    padding: 1rem;
+    margin: 5% 10%;
+}
+
+.row-skills{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.row-skills > img{
+   width: 6rem;
+   padding: 1rem;
+}
+
+footer{
+    width: 100%;
+    height: 3rem;
+    text-align: center;
+    background-color: rgb(10, 10, 10);
 }
