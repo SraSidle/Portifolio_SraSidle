@@ -4,7 +4,16 @@
   box-sizing: border-box;
 }
 
-.animacao { /* antigo body*/
+.dois{
+  /* width: 1000vw; */
+  height: 100vh;
+  background-color: #de004e;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.animacao {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -41,7 +50,7 @@ h2{
   opacity: 0.7;
 }
 
-h3{
+h9{
   background: linear-gradient(to bottom , #af43be, #fd8090, #c4ffff, #08dee0, #1261d1);
 background: linear-gradient(to right, #f887ff, #de004e, #860029, #321450, #29132e); 
    background: linear-gradient(to right, #7700a6, #fe00fe, #defe47, #00b3f3, #0016ee);
