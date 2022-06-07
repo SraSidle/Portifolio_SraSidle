@@ -1,3 +1,16 @@
+function alterabody(){
+    let animationNeon = document.querySelector(".animacao");
+   let rocketAnimation = document.querySelector(".scene");
+
+
+setTimeout(() => { animationNeon.style.display = 'none'} , 10000)
+
+setTimeout(() => { rocketAnimation.style.display = 'flex'}, 10001);
+
+}
+
+alterabody();
+
 function stars(){
     let count = 150;
     let scene = document.querySelector('.scene');
@@ -23,3 +36,5 @@ function stars(){
 }
 
 stars();
+
+
