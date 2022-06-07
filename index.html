@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
     <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="./rocket.css" />
     <link rel="stylesheet" href="./home.css" />
@@ -40,7 +41,22 @@
             <div class="container-left">
               <h3>Olá, eu sou Bianca Aguiar</h3>
               <h4 class="profissão">Desenvolvedora Frontend</h4>
+
+              <div class="dropdown-button" onclick="viewDropdown()">
               <button>Entrar em contato</button>
+              </div>
+
+              <div class="dropdown-content"
+                   style="display: flex" >
+                  <div class="meus-contatos">
+                       <i class="bi bi-whatsapp text-primary"></i>
+                       <i class="bi bi-linkedin text-sucess"></i>
+                       <i class="bi bi-facebook text-danger"></i>
+                       <p class="gmail">
+                      <span style="color: #4285F4">G</span><span style="color: #DB4437">o</span><span style="color: #F4B400">o</span><span style="color: #4285F4">g</span><span style="color: #0F9D58">l</span><span style="color: #DB4437">e</span></p>
+                  </div>
+              </div>
+
             </div>
 
             <div class="container-right">
@@ -63,37 +79,62 @@
         </section>
 
         <section id="projetos">
+          <h3>Meus Projetos</h3>
+
           <div class="container-projects">
-            <h3>Meus Projetos</h3>
+            
             <div class="card-project">
-              <p>Título do projeto</p>
-              <p>Tecnologias</p>
-              <img src="" alt="Projeto ..." />
+              <p>Jogo do Humor</p>
+              <p>HTML CSS JavaScript</p>
+              <img src="./images/Jogo do Humor.png" alt="Projeto ..." />
+            </div>
+
+            <div class="card-project">
+              <P>Pokedéx MVC</P>
+              <p>HTML CSS Node JS JavaScript</p>
+              <img src="./images/Pokedex.png" alt="Projeto ..." />
+            </div>
+
+            <div class="card-project">
+              <p>El Geladon JS-Vanilla</p>
+              <p>HTML CSS JavaScript</p>
+              <img src="./images/Dropdown e Todas.png" alt="Projeto ..." />
+            </div>
+
+            <div class="card-project">
+              <p>El Geladon React</p>
+              <p>React</p>
+              <img src="./images/El geladon_React.png" alt="Projeto ..." />
             </div>
           </div>
+
+
         </section>
 
         <section id="servicos">
           <h3>Serviços</h3>
-          <div id="servico-1">
+          <div class="row-servicos">
+            <div class="servico" id="servico-1">
             <i class="icone"></i>
             <p class="nome-do-servico1">Criação de Sites</p>
           </div>
 
-          <div id="servico-2">
+          <div class="servico" id="servico-2">
             <i class="icone"></i>
             <p class="nome-do-servico2">Sites Responsivos</p>
           </div>
 
-          <div id="servico-3">
+          <div class="servico" id="servico-3">
             <i class="icone"></i>
             <p class="nome-do-servico3">Animações</p>
           </div>
 
-          <div class="servico-4">
+          <div class="servico" id="servico-4">
             <i class="icone"></i>
             <p class="nome-do-servico4">Consumo de API</p>
           </div>
+          </div>
+          
         </section>
 
         <section id="skills">
@@ -120,6 +161,7 @@
         >
       </p>
     </footer>
+
       </section>    
     </main>
   
