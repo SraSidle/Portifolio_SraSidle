@@ -3,9 +3,9 @@ function alterabody(){
    let rocketAnimation = document.querySelector(".scene");
 
 
-setTimeout(() => { animationNeon.style.display = 'none'} , 10000)
+setTimeout(() => { animationNeon.style.display = 'none'} , 00001)
 
-setTimeout(() => { rocketAnimation.style.display = 'flex'}, 10001);
+setTimeout(() => { rocketAnimation.style.display = 'none'}, 00001);
 
 }
 
@@ -24,6 +24,7 @@ function stars(){
         star.style.left = x + 'px';
         star.style.width = 1 + 'px';
         star.style.height = 40 + 'px';
+        //star.style.borderradius = 50 + '%'
         star.style.animationDuration = duration + 's';
         
         scene.appendChild(star);//adiciona star dentro de scene
