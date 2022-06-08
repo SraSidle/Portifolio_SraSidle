@@ -7,7 +7,7 @@ body{
     color: rgb(216, 200, 212);
 }
 
-@media (max-width:100px){
+@media (max-width:1000px){
 
 }
     
@@ -141,8 +141,8 @@ h3{
 }
 
 .corner{
-    width: 295px;
-    height: 345px;
+    width: 297px;
+    height: 347px;
     background: black;
     z-index: 1;
     display: flex;
@@ -154,7 +154,6 @@ h3{
 .content{
     width: 250px;
     height: 300px;
-   
     z-index: 2;
     display: flex;
     flex-direction: column;
