@@ -3,7 +3,7 @@ function alterabody(){
    let rocketAnimation = document.querySelector(".scene");
 
 
-setTimeout(() => { animationNeon.style.display = 'none'} , 00001)
+setTimeout(() => { animationNeon.style.display = 'none'} , 10001)
 
 setTimeout(() => { rocketAnimation.style.display = 'none'}, 00001);
 
