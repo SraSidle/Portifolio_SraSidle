@@ -1,15 +1,25 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css");
 
-.home{
+body{
     background-color: rgb(10, 10, 10);
+    width: 100vw;
+    height: 100vh;
+    color: rgb(216, 200, 212);
+}
+
+@media (max-width:100px){
+
+}
+    
+.home{
     width: 100%;
     height: 100%;
-    color: rgb(216, 200, 212);
 }
 
 header{
     display: flex;
     flex-direction: column;
+    width: 100%;
     padding: 1rem 3rem;
 }
 
@@ -107,7 +117,7 @@ h3{
     position: relative;
     display: flex;
     justify-content: center;
-    margin-left: 10rem;
+    margin: 2rem;
     align-items: center;
     width: 300px;
     height: 350px;
@@ -122,29 +132,32 @@ h3{
 }
 
 .animated-border{
-    width: 400px;
-    height: 350px;
+    width: 600px;
+    height: 250px;
+     margin-bottom: 1rem;
     position: absolute;
     background-color: #f1b;
     animation: rotate 5s infinite ease-in-out;
 }
 
 .corner{
-    width: 290px;
-    height: 340px;
+    width: 295px;
+    height: 345px;
     background: black;
     z-index: 1;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center; 
+   
 }
 
 .content{
     width: 250px;
     height: 300px;
-    background: rgba(255, 255, 255, 0.3);
+   
     z-index: 2;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     border: 2px solid #de0d9c;
@@ -152,6 +165,7 @@ h3{
 .container-projects{
     padding: 1rem;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
@@ -164,7 +178,8 @@ h3{
     height: 20rem;
 }
 
-.card-project > img{
+.card-project > img,
+img.card{
     width: 12rem;
     height: 10rem;
 }
