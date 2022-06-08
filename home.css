@@ -157,7 +157,11 @@ h3{
     height: 250px;
      margin-bottom: 1rem;
     position: absolute;
-    background-color: #f1b;
+    background-image: radial-gradient(
+    farthest-corner at 40px 40px,
+    #50c5ee 40%,
+    #defe47,
+    rgba(255, 0, 234, 0.5) 100%);
     animation: rotate 5s infinite ease-in-out;
 }
 
