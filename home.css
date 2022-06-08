@@ -4,7 +4,7 @@
     background-color: rgb(10, 10, 10);
     width: 100%;
     height: 100%;
-    color: #f1b;
+    color: rgb(216, 200, 212);
 }
 
 header{
@@ -18,6 +18,16 @@ nav{
     display: flex;
     justify-content: space-between;
     
+}
+
+nav > p{
+    font-size: 2rem;
+    font-weight: 700;
+    padding: 1rem;
+    color: #f1b;
+    border: solid 5px #f1b;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.3), 0 0 20px #f1b;
+    box-shadow: inset 0 0 20px #f1b, 0 0 20px #f1b;
 }
 
 ul{
@@ -50,6 +60,27 @@ i{
     justify-content: space-evenly;
 }
 
+h4{
+   color: #2BFDFF;
+}
+
+button{
+    padding: 1rem;
+    border-radius: .7rem;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: ease-in-out .6s;
+    background-color: transparent;
+    color:#f1b;
+    border: dashed 2px #f1b;
+}
+
+button:hover{
+    transform: scale(1.05);
+    background-color: #f1b;
+    color: rgb(10, 10, 10);
+}
+
 .dropdown-content{
     background-color: rgb(255,255,255,0.1);
     width: 10rem;
@@ -69,8 +100,55 @@ i{
 h3{
     text-align: center;
     margin-bottom: 0.7rem;
+    color:#f1b;
 }
 
+.container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-left: 10rem;
+    align-items: center;
+    width: 300px;
+    height: 350px;
+    overflow: hidden;
+
+}
+
+@keyframes rotate{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.animated-border{
+    width: 400px;
+    height: 350px;
+    position: absolute;
+    background-color: #f1b;
+    animation: rotate 5s infinite ease-in-out;
+}
+
+.corner{
+    width: 290px;
+    height: 340px;
+    background: black;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content{
+    width: 250px;
+    height: 300px;
+    background: rgba(255, 255, 255, 0.3);
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #de0d9c;
+}
 .container-projects{
     padding: 1rem;
     display: flex;
