@@ -8,6 +8,23 @@ body{
 }
 
 @media (max-width:1000px){
+     nav{
+         flex-direction: column-reverse;
+         justify-content: center;
+         align-items: center;
+     }
+     .titulo{
+         width: 10rem;
+         margin: 1.5rem 0.7rem;
+     }
+     .apresentacao{
+         flex-direction: column-reverse;
+         justify-content: center;
+         align-items: center;
+     }
+}
+
+@media (max-width: 385px){
 
 }
     
@@ -40,6 +57,10 @@ nav > p{
     box-shadow: inset 0 0 20px #f1b, 0 0 20px #f1b;
 }
 
+.titulo{
+    width: 20rem;
+}
+
 ul{
     display: flex;
     justify-content: space-evenly;
@@ -60,7 +81,7 @@ i{
 .apresentacao{
     padding: 1rem;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
 }
 
 .container-left{
@@ -98,12 +119,12 @@ button:hover{
 }
 
 .foto{
-    width: 10rem;
+    width: 15rem;
     border-radius: 50%;
 }
 
 .sobre-eu{
-    margin: 5% 10%;
+    margin: 5% 15%;
     padding: 1rem;
 }
 
@@ -141,9 +162,9 @@ h3{
 }
 
 .corner{
-    width: 297px;
-    height: 347px;
-    background: black;
+    width: 296px;
+    height: 346px;
+    background: rgb(10, 10, 10);
     z-index: 1;
     display: flex;
     align-items: center;
@@ -152,8 +173,8 @@ h3{
 }
 
 .content{
-    width: 250px;
-    height: 300px;
+    width: 265px;
+    height: 315px;
     z-index: 2;
     display: flex;
     flex-direction: column;
@@ -179,8 +200,8 @@ h3{
 
 .card-project > img,
 img.card{
-    width: 12rem;
-    height: 10rem;
+    width: 13rem;
+    height: 8rem;
 }
 
 .row-servicos{
@@ -205,7 +226,7 @@ img.card{
     display: flex;
     justify-content: center;
     align-items: center;
-
+    flex-wrap: wrap;
 }
 
 .row-skills > img{
