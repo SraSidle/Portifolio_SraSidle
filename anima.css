@@ -50,7 +50,7 @@ div.line-1{
     white-space: nowrap;
     overflow: hidden;
     border-right: 2px solid rgba(255, 255, 255, 0.75);
-     animation: piscacursor 500ms 5s normal, digita 4s 1s steps(30) normal, none-border 2s 5s normal;
+     animation: piscacursor 500ms 5s normal , digita 4s 1s steps(30) normal, none-border 1s 5s ease;
 }
 
 div.line-2{
