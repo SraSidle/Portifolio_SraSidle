@@ -38,4 +38,30 @@ function stars(){
 
 stars();
 
+function viewDropdown() {
+    const buttons = document.querySelectorAll(".dropdown-button");
+    buttons.forEach((button) => {
+      button.addEventListener("click", (event) => {
+        const content = event.path[2].children[1];
+        console.log(content);
+  
+        content.classList.toggle("active");
+  
+        if (content.classList.contains("active")) {
+          content.style.display = "block";
+        } else {
+          content.style.display = "none";
+        }
+  
+        content.addEventListener("mouseleave", () => {
+          content.classList.remove("active");
+          if (!content.classList.contains("active")) {
+            content.style.display = "none";
+          }
+        });
+      });
+    });
+  }
+  
+  
 
