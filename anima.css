@@ -1,0 +1,89 @@
+*{}
+
+body{
+    background-color: #282a36;
+}
+
+.pink{
+    color: #ff79c6;
+}
+
+.green-italic{
+   color: #50fa7b;
+   font-family: italic;
+}
+
+.yellow{
+    color: #f1fa8c;
+}
+
+.red{
+    color: #ff5555;
+}
+
+.purple{
+    color: #bd93f9;
+}
+
+.orange{
+    color: #ffb86c
+}
+
+.cyan{
+    color: #8be9fd;
+}
+
+.coment{
+    color: #6272a4;
+}
+
+.white{
+    color: #f8f8f2;
+}
+
+.courent-line{
+    color: #44475a;
+}
+
+div.line-1{
+    width: 9.15rem;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid rgba(255, 255, 255, 0.75);
+     animation: piscacursor 500ms 5s normal, digita 4s 1s steps(30) normal, none-border 2s 5s normal;
+}
+
+div.line-2{
+    width: 10rem;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid rgba(255, 255, 255, 0.75);
+     animation: piscacursor 500ms 5s normal, digita 4s 6s steps(30) normal;
+}
+
+@keyframes digita{
+    from{
+        width: 0;
+    }
+    to{
+        width: 9.5rem;
+    }
+
+}
+@keyframes piscacursor{
+    from{
+     border-right: 2px solid rgba(255, 255, 255, 0.75); 
+    }
+    to{
+        border-right: none;
+    }
+}
+
+@keyframes none-border{
+    0%{
+        border-right: 2px solid rgba(255, 255, 255, 0.75); 
+    }
+    100%{
+        border-right: none;
+    }
+}
