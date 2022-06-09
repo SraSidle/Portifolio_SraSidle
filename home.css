@@ -85,6 +85,7 @@ i{
 }
 
 .container-left{
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -95,7 +96,7 @@ h4{
    color: #2BFDFF;
 }
 
-button{
+button.contato{
     padding: 1rem;
     border-radius: .7rem;
     font-size: 1rem;
@@ -106,17 +107,42 @@ button{
     border: dashed 2px #f1b;
 }
 
-button:hover{
+button.contato:hover{
     transform: scale(1.05);
     background-color: #f1b;
     color: rgb(10, 10, 10);
 }
 
 .dropdown-content{
-    background-color: rgb(255,255,255,0.1);
-    width: 10rem;
-    height: 15rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
+
+.meus-contatos{
+    width: 100%; /*pra celular tá bom, mas pra computer, não*/
+    height: 7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.contatos{
+    border: none /*solid 2px #f1b;*/;
+    width: 2.5rem;
+    height: 2.5rem;
+    margin: 0.3rem 0.2rem;
+    color: #f1b;
+    font-weight: 1000;
+    font-size: 1.5rem;
+    background-color: black;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3), 0 0 7px #f1b;
+    box-shadow: inset 0 0 3px #f1b, 0 0 3px #f1b;
+}
+
 
 .foto{
     width: 15rem;
