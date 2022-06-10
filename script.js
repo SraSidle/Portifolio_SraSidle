@@ -5,7 +5,7 @@ function alterabody(){
 
 setTimeout(() => { animationNeon.style.display = 'none'} , 10001)
 
-setTimeout(() => { rocketAnimation.style.display = 'none'}, 00001);
+//setTimeout(() => { rocketAnimation.style.display = 'none'}, 00001);
 
 }
 
@@ -53,7 +53,7 @@ function viewDropdown() {
           content.style.display = "none";
         }
   
-        content.addEventListener("mouseleave", () => {
+        content.addEventListener("mouseleave",() => {
           content.classList.remove("active");
           if (!content.classList.contains("active")) {
             content.style.display = "none";
