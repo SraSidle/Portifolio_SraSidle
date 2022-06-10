@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="./rocket.css" />
+    <link rel="stylesheet" href="./mini_rocket.css"/>
     <link rel="stylesheet" href="./home.css" />
+    <link rel="stylesheet" href="./anima.css" />
     <link
     rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css"
@@ -22,29 +24,25 @@
         <h2 class="shadown-animation">.</h2>
       </section>
 
-      <section class="scene">
-        <div class="rocket">
-          <img class="foto" src="./images/rocket.png" alt="foto do foguete" />
-        </div>
-      </section>
-
       <section class="home">
         <header>
           <nav>
             <p class="titulo">Portifólio Sra_Sidle</p>
             <ul>
-              <li>Sobre mim</li>
-              <li>Projetos</li>
-              <li>Serviços</li>
-              <li>Minhas skills</li>
+              <a href="#sobre-mim">Sobre mim</a>
+              <a href="#projetos">Projetos</a>
+              <a href="#servicos">Serviços</a>
+              <a href="#skills">Minhas skills</a>
             </ul>
           </nav>
 
           <div class="apresentacao">
             <div class="container-left">
-              <h3>Olá, eu sou Bianca Aguiar</h3>
-              <h4 class="profissão">Desenvolvedora Frontend</h4>
-
+              <div class="nome-profissao">
+                <h3>Olá, eu sou Bianca Aguiar</h3>
+                <h4 class="profissão">Desenvolvedora Frontend</h4>
+              </div>
+              
               <div class="dropdown-content"
                    style="display: flex" >
                    <div class="dropdown-button" onclick="viewDropdown()">
@@ -66,7 +64,7 @@
           </div>
         </header>
 
-        <section class="sobre-eu"id="sobre mim">
+        <section class="sobre-eu"id="sobre-mim">
           <h3>Sobre mim</h3>
           <p>
             Jovem apaixonada por tecnologia e inovação, em busca de novos
@@ -130,7 +128,7 @@
                           
                           <p>El Geladon React</p>
                           <p>React</p>
-                          <img  class="card" src="./images/El geladon_React.png" alt="Projeto ..." />
+                          <img  class="card" src="./images/El geladon_React.png" alt="Imagem do Projeto El Geladon React com cores em tema verão" />
                                                                 
                           </div>
                         </div>
@@ -143,22 +141,48 @@
           <div class="row-servicos">
             <div class="servico" id="servico-1">
             <i class="icone"></i>
-            <p class="nome-do-servico1">Criação de Sites</p>
+            <p class="nome-servico">Criação de Sites</p>
+            <div class="line-1 animacao-cursor">
+              <img src="./images/sinal de menor.png" alt="sinal de menor">
+              <span class="white">!</span>
+              <span class="pink">DOCTYPE </span>
+              <span class="green-italic border-right">html</span>
+              <img src="./images/Sinal de maior.png">
+      </div>
+      
+      <div class="line-2 animacao-cursor">
+          <img src="./images/sinal de menor.png" alt="sinal de menor">
+      <span class="pink"> html </span>
+      <span class="green-italic">Lang</span>
+      <span class="pink">=</span>
+      <span class="yellow">"pt-br"</span>
+      <img src="./images/Sinal de maior.png">
+      </div>
+
+      <div class="line-3 animacao-cursor">
+           <img src="./images/sinal de menor.png" alt="sinal de menor">
+      </div>
           </div>
 
           <div class="servico" id="servico-2">
             <i class="icone"></i>
-            <p class="nome-do-servico2">Sites Responsivos</p>
+            <p class="nome-servico">Sites Responsivos</p>
           </div>
 
           <div class="servico" id="servico-3">
             <i class="icone"></i>
-            <p class="nome-do-servico3">Animações</p>
+            <p class="nome-servico">Animações</p>
+
+            <section class="scene">
+              <div class="rocket">
+                <img class="foto-foguete" src="./images/rocket.png" alt="foto do foguete" />
+              </div>
+            </section>
           </div>
 
           <div class="servico" id="servico-4">
             <i class="icone"></i>
-            <p class="nome-do-servico4">Consumo de API</p>
+            <p class="nome-servico">Consumo de API</p>
           </div>
           </div>
           

@@ -7,7 +7,7 @@ body{
     color: rgb(216, 200, 212);
 }
 
-@media (max-width:1000px){
+@media only screen and (max-width:1000px){
      nav{
          flex-direction: column-reverse;
          justify-content: center;
@@ -18,13 +18,14 @@ body{
          margin: 1.5rem 0.7rem;
      }
      .apresentacao{
+        display: flex;
          flex-direction: column-reverse;
          justify-content: center;
          align-items: center;
      }
 }
 
-@media (max-width: 385px){
+@media only screen and(max-width: 385px){
 
 }
     
@@ -44,6 +45,7 @@ nav{
     padding: 1rem;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     
 }
 
@@ -68,8 +70,8 @@ ul{
     flex-direction: row;
 }
 
-li{
-    list-style: none;
+a{
+    text-decoration: none;
     padding: .7rem;
     font-weight: 1rem;
 }
@@ -78,60 +80,65 @@ i{
     color:#f1b;
     width: 3rem;
 }
+
 .apresentacao{
-    padding: 1rem;
+    width: 100%;
     display: flex;
     justify-content: center;
 }
 
 .container-left{
+    width: 15rem;
+}
+
+.nome-profissao{
     width: 100%;
+    height: 50%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    justify-content: space-evenly;
-}
-
-h4{
-   color: #2BFDFF;
-}
-
-button.contato{
-    padding: 1rem;
-    border-radius: .7rem;
-    font-size: 1rem;
-    font-weight: 600;
-    transition: ease-in-out .6s;
-    background-color: transparent;
-    color:#f1b;
-    border: dashed 2px #f1b;
-}
-
-button.contato:hover{
-    transform: scale(1.05);
-    background-color: #f1b;
-    color: rgb(10, 10, 10);
 }
 
 .dropdown-content{
     width: 100%;
-    display: flex;
+    height: 50%;
+    display: none;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: flex-start;
+}
+
+.dropdown-button{
+    height: 50%;
 }
 
 .meus-contatos{
-    width: 100%; /*pra celular tá bom, mas pra computer, não*/
-    height: 7rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    height: 50%;
+}
 
+button.contato{
+    width: 10rem;
+    padding: .7rem;
+    border-radius: .7rem;
+    font-size: .8rem;
+    align-items: center;
+    font-weight: 500;
+    transition: ease-in-out 1s;
+    background-color: transparent;
+    color:#f1b;
+    border: dashed 2px #770f59;
+}
+
+button.contato:hover{
+    background-color: #770f59;
+    font-weight: 600;
+    font-size: 0.85rem;
+    color: rgb(0, 0, 0);
 }
 
 .contatos{
-    border: none /*solid 2px #f1b;*/;
+    border: none;
     width: 2.5rem;
     height: 2.5rem;
     margin: 0.3rem 0.2rem;
@@ -142,10 +149,62 @@ button.contato:hover{
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.3), 0 0 7px #f1b;
     box-shadow: inset 0 0 3px #f1b, 0 0 3px #f1b;
 }
+/* .apresentacao{
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.container-left{
+    width: 15rem;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h4{
+   color: #2BFDFF;
+}
+
+.nome-profissao{
+   height: 50%;
+}
+
+.dropdown-content{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.meus-contatos{
+    width: 100%;  
+    height: 7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contatos{
+    border: none;
+    width: 2.5rem;
+    height: 2.5rem;
+    margin: 0.3rem 0.2rem;
+    color: #f1b;
+    font-weight: 1000;
+    font-size: 1.5rem;
+    background-color: black;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3), 0 0 7px #f1b;
+    box-shadow: inset 0 0 3px #f1b, 0 0 3px #f1b;
+} */ /*pra celular tá bom, mas pra computer, não linha 150 solid 2px #f1b;*/
 
 .foto{
-    width: 15rem;
+    width: 13rem;
     border-radius: 50%;
 }
 
@@ -242,9 +301,16 @@ img.card{
 }
 
 .servico{
-    background-color: rgb(255,255,255,0.1);
+    background: #282a36;
+    width: 12rem;
+    height: 16rem;
     padding: 1rem;
     margin: 0.7rem;
+}
+
+.nome-servico{
+    text-align: center;
+    margin-bottom: 0.7rem
 }
 
 #skills{
