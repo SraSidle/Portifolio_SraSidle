@@ -53,10 +53,10 @@ nav > p{
     font-size: 2rem;
     font-weight: 700;
     padding: 1rem;
-    color: #f1b;
-    border: solid 5px #f1b;
-    text-shadow: 0 0 5px rgba(255, 255, 255, 0.3), 0 0 20px #f1b;
-    box-shadow: inset 0 0 20px #f1b, 0 0 20px #f1b;
+    color: #B4Fa48;
+    border: solid 5px #B4Fa48;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.3), 0 0 25px #B4Fa48;
+    box-shadow: inset 0 0 20px #B4Fa48, 0 0 20px #B4Fa48;
 }
 
 .titulo{
@@ -71,6 +71,7 @@ ul{
 }
 
 a{
+    color: #B4Fa48;
     text-decoration: none;
     padding: .7rem;
     font-weight: 1rem;
@@ -311,8 +312,8 @@ img.card{
 
 .servico{
     background: #282a36;
-    width: 12rem;
-    height: 16rem;
+    width: 15rem;
+    height: 20rem;
     padding: 1rem;
     margin: 0.7rem;
 }
