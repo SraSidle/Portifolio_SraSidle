@@ -1,0 +1,423 @@
+/*Neste arquivo, está presente a estilização da página inicial completa, alguns dos seus componentes estão
+em outros arquivos css
+1-animação de quando recarrega a página: "Neon.css"
+2-animação de digitar na secção de serviços, está no arquivo "digitacao.css"
+3-mini-rocket foi uma adaptação para caber no card de serviços "mini_rocket.css"
+$-por enquanto, desconsiderar o rocket.css*/
+body {
+  background-color: rgb(10, 10, 10);
+  width: 100vw;
+  height: 100vh;
+  color: rgb(216, 200, 212);
+}
+
+/*adaptações para tamanhos de tela diferentes*/
+@media only screen and (max-width: 1000px) {
+  nav {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+  .apresentacao {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media only screen and(max-width: 385px) {
+  .container {
+    width: 270px;
+    height: 350px;
+  }
+  .corner {
+    width: 246px;
+    height: 296px;
+  }
+
+  .content {
+    width: 215px;
+    height: 275px;
+  }
+  .card {
+    width: 10rem;
+  }
+}
+
+/*por conta das animações, esse ".home" vai funcionar como body*/
+.home {
+  display: none;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 1rem 3rem;
+}
+
+nav {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav > p {
+  font-size: 2rem;
+  font-weight: 700;
+  padding: 1rem;
+  color: #b4fa48;
+  border: solid 5px #b4fa48;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.3), 0 0 25px #b4fa48;
+  box-shadow: inset 0 0 20px #b4fa48, 0 0 20px #b4fa48;
+}
+
+.titulo {
+  width: auto;
+  text-align: center;
+}
+
+ul {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: row;
+}
+
+a {
+  color: #b4fa48;
+  text-decoration: none;
+  padding: 0.7rem;
+  font-weight: 1rem;
+}
+/*meu nome, profissão, botão ancorado à section contatos e foto de perfil*/
+.apresentacao {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.container-left {
+  width: 15rem;
+  height: 13rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+button.contato {
+  width: 10rem;
+  padding: 0.7rem;
+  border-radius: 0.7rem;
+  font-size: 0.8rem;
+  align-items: center;
+  font-weight: 500;
+  transition: ease-in-out 1s;
+  background-color: #770f59;
+}
+
+button.contato:hover {
+  background-color: #b3fa48d7;
+  font-weight: 500;
+  font-size: 0.85rem;
+  color: rgb(0, 0, 0);
+}
+
+/**/
+
+.contatos {
+  border: none;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin: 0.3rem 0.2rem;
+  color: #f1b;
+  font-weight: 1000;
+  font-size: 1.5rem;
+  background-color: black;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3), 0 0 7px #f1b;
+  box-shadow: inset 0 0 3px #f1b, 0 0 3px #f1b;
+}
+
+.link-contato {
+  width: 2rem;
+}
+
+.foto {
+  width: 13rem;
+  border-radius: 50%;
+}
+
+.sobre-eu {
+  margin: 5% 15%;
+  padding: 1rem;
+}
+/*Esse h3 está estilizando todos os títulos das sections*/
+h3 {
+  text-align: center;
+  margin-bottom: 0.7rem;
+  color: #f1b;
+}
+/*Estilização da section contatos*/
+#meus-contatos {
+  margin: 5% 15%;
+  padding: 1rem;
+}
+.meus__contatos {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 2.5rem;
+}
+
+.individual__contact {
+  width: 8rem;
+  height: 6rem;
+}
+
+.individual__contact > a {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.individual__contact > a:hover {
+  color: #770f59;
+}
+
+.meu__numero {
+  font-size: 0.7rem;
+  text-align: center;
+}
+
+/*Configuração das bordas animadas*/
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin: 2rem;
+  align-items: center;
+  width: 300px;
+  height: 350px;
+  overflow: hidden;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.animated-border {
+  width: 600px;
+  height: 250px;
+  margin-bottom: 1rem;
+  position: absolute;
+  background-image: radial-gradient(
+    farthest-corner at 40px 40px,
+    #50c5ee 40%,
+    #defe47,
+    rgba(255, 0, 234, 0.5) 100%
+  );
+  animation: rotate 5s infinite ease-in-out;
+}
+
+.corner {
+  width: 296px;
+  height: 346px;
+  background: rgb(10, 10, 10);
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content {
+  width: 265px;
+  height: 315px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  border: 2px solid #de0d9c;
+}
+.card {
+  transition: ease-in-out 1s;
+}
+.card:hover {
+  transform: scale(1.4);
+}
+
+.content > a {
+  color: white;
+  width: 55%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  cursor: pointer;
+}
+
+.content > a:hover {
+  color: rgba(255, 0, 234, 0.5);
+}
+
+.fold-break {
+  text-align: center;
+}
+
+/*section projetos, as animações presentes neles, estão estilizadas em outros arquivos css */
+.container-projects {
+  padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-project {
+  background-color: rgb(255, 255, 255, 0.1);
+  padding: 1rem;
+  margin: 2rem;
+  width: 15rem;
+  height: 20rem;
+}
+
+.card-project > img,
+img.card {
+  width: 13rem;
+  height: 8rem;
+}
+/*section de serviços*/
+.row-servicos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.servico {
+  background: #282a36;
+  width: 15rem;
+  height: 20rem;
+  padding: 1rem;
+  margin: 0.7rem;
+}
+
+.nome-servico {
+  text-align: center;
+  margin-bottom: 0.7rem;
+}
+
+.representacao__CRUD {
+  width: 100%;
+  height: 16rem;
+  background-color: #fff;
+  color: black;
+}
+
+.representacao__CRUD > p {
+  padding-top: 0.7rem;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 600;
+}
+.methods {
+  width: 90%;
+  height: 3rem;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.GET {
+  margin: 0.3rem;
+  background-color: #50c4ee3a;
+  border: solid 1px #50c5ee;
+}
+
+.GET > p {
+  width: 2.5rem;
+  background-color: #50c5ee;
+}
+
+.POST {
+  margin: 0.3rem;
+  background-color: #50ee583a;
+  border: solid 1px #50ee583a;
+}
+
+.POST > p {
+  margin: 0.2rem;
+  width: 2.7rem;
+  background-color: #50eeac;
+}
+
+.PUT {
+  margin: 0.3rem;
+  background-color: #e3ee503a;
+  border: solid 1px #e3ee503a;
+}
+
+.PUT > P {
+  margin: 0.2rem;
+  width: 2.5rem;
+  background-color: #ebee50;
+}
+
+.DELETE {
+  margin: 0.3rem;
+  background-color: #ee50503a;
+  border: solid 1px #ee50503a;
+}
+
+.DELETE > P {
+  margin: 0.2rem;
+  width: 4rem;
+  background-color: #ee5050;
+}
+/*section das imagens das tecnologias que utilizo*/
+#skills {
+  padding: 1rem;
+  margin: 5% 10%;
+}
+
+.row-skills {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.row-skills > img {
+  width: 6rem;
+  padding: 1rem;
+}
+/*rodapé com meus créditos e meu nome ancorado ao linkedin*/
+footer {
+  width: 100%;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(255, 255, 255, 0.1);
+}
+
+.footer {
+  text-decoration: none;
+  transition: ease-in-out 0.3s;
+}
+
+.footer:hover {
+  text-decoration: underline;
+  color: #f1b;
+  cursor: pointer;
+}
