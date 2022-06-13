@@ -1,46 +1,46 @@
-.anima{
-    background-color: #282a36;
+.anima {
+  background-color: #282a36;
 }
 
-.pink{
-    color: #ff79c6;
+.pink {
+  color: #ff79c6;
 }
 
-.green-italic{
-   color: #50fa7b;
-   font-family: italic;
+.green-italic {
+  color: #50fa7b;
+  font-family: italic;
 }
 
-.yellow{
-    color: #f1fa8c;
+.yellow {
+  color: #f1fa8c;
 }
 
-.red{
-    color: #ff5555;
+.red {
+  color: #ff5555;
 }
 
-.purple{
-    color: #bd93f9;
+.purple {
+  color: #bd93f9;
 }
 
-.orange{
-    color: #ffb86c
+.orange {
+  color: #ffb86c;
 }
 
-.cyan{
-    color: #8be9fd;
+.cyan {
+  color: #8be9fd;
 }
 
-.coment{
-    color: #6272a4;
+.coment {
+  color: #6272a4;
 }
 
-.white{
-    color: #f8f8f2;
+.white {
+  color: #f8f8f2;
 }
 
-.courent-line{
-    color: #44475a;
+.courent-line {
+  color: #44475a;
 }
 
 div.line-1,
@@ -52,101 +52,137 @@ div.line-6,
 div.line-7,
 div.line-8,
 div.line-9,
-div.line-10{
-    width:0;
-    white-space: nowrap;
-    overflow: hidden;
+div.line-10,
+div.line-11,
+div.line-12 {
+  width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  /* border-left: 2px solid rgba(255, 255, 255, 0.75);*/
+  border-right: 2px solid rgba(255, 255, 255, 0.75);
+}
+
+div.line-1 {
+  animation: piscacursor 500ms 0.1s normal, digita 4s 0.1s steps(30) normal,
+    none-border 10000s 4.1s normal;
+}
+
+div.line-2 {
+  animation: none-border 4s 1ms normal, piscacursor 500ms 4.1s normal,
+    digita 4s 4.1s steps(30) normal, none-border 10000s 8.1s normal;
+}
+
+div.line-3 {
+  animation: none-border 8.2s 0.01ms normal, piscacursor 900ms 5s normal,
+    digita 4s 8.2s steps(30) normal, none-border 10000s 12.1s normal;
+}
+
+div.line-4 {
+  animation: none-border 12.3s 0.01ms normal, piscacursor 900ms 5s normal,
+    digita2 4s 12.3s steps(15) normal, none-border 1000s 16.2s normal;
+}
+
+div.line-5 {
+  animation: none-border 16.4s 0.01ms normal, piscacursor 900ms 5s normal,
+    digita 4s 16.4s steps(30) normal, none-border 1000s 20.2s normal;
+}
+
+div.line-6 {
+  animation: none-border 20.3s 0.01ms normal, piscacursor 900ms 5s normal,
+    digita2 4s 20.5s steps(30) normal, none-border 1000s 24.2s normal;
+}
+
+div.line-7 {
+  animation: none-border 24.4s 0.01ms normal, piscacursor 900ms 5s normal,
+    digita3 4s 24.6s steps(30) normal, none-border 1000s 28.2s normal;
+}
+
+div.line-8 {
+  animation: none-border 28.5s 0.01ms normal, piscacursor 900ms 5s normal,
+    digita 4s 28.7s steps(30) normal, none-border 1000s 32.2s normal;
+}
+
+div.line-9 {
+  animation: none-border 32.5s 0.01ms normal, piscacursor 900ms 5s normal,
+    digita3 4s 32.8s steps(30) normal, none-border 1000s 36.2s normal;
+}
+
+div.line-10 {
+  animation: none-border 36.6s 0.01ms normal, piscacursor 900ms 5s normal,
+    digita2 4s 36.9s steps(30) normal, none-border 1000s 40.2s normal;
+}
+
+div.line-11 {
+  animation: none-border 40.6s 0.01ms normal, piscacursor 900ms 5s normal,
+    digita 4s 40.9s steps(30) normal, none-border 1000s 44.2s normal;
+}
+
+div.line-12 {
+  animation: none-border 44.6s 0.01ms normal, piscacursor 900ms 5s normal,
+    digita2 4s 45s steps(30) normal, none-border 1000s 48.2s normal;
+}
+
+div.line-13 {
+  animation: none-border 46s 0.01ms normal, piscacursor 900ms 5s normal,
+    digita2 4s 49.1s steps(30) normal, none-border 1000s 52.2s normal;
+}
+@keyframes digita {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 10rem;
+  }
+}
+
+@keyframes digita2 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 5rem;
+  }
+}
+
+@keyframes digita3 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 7rem;
+  }
+}
+
+@keyframes piscacursor {
+  from {
     border-right: 2px solid rgba(255, 255, 255, 0.75);
+  }
+  to {
+    border-right: transparent;
+  }
 }
 
-div.line-1{
-         animation: piscacursor 900ms 5s normal,
-         digita 4s 0.1s steps(30) normal,
-         none-border 100s 6s normal ;
+@keyframes none-border {
+  0% {
+    border-right: 2px solid #282a36;
+  }
+  2% {
+    border-right: 2px solid #282a36;
+  }
+  100% {
+    border-right: none;
+  }
 }
 
-div.line-2{
-    animation: piscacursor 900ms 5s infinite normal,
-    digita 4s 4.1s steps(30) normal,
-    none-border 100s 6s normal ;
-}
-
-div.line-3{
-    animation: piscacursor 900ms 5s infinite normal,
-    digita 4s 8.2s steps(30) normal,
-    none-border 100s 6s normal ;
-}
-
-div.line-4{
-    animation: piscacursor 900ms 5s infinite normal,
-    digita 4s 12.1s steps(30) normal;
-}
-
-div.line-5{
-    animation: piscacursor 900ms 5s infinite normal,
-    digita 4s 11s steps(30) normal;
-}
-
-div.line-6{
-    animation: piscacursor 900ms 5s infinite normal,
-    digita 4s 11s steps(30) normal;
-}
-
-div.line-7{
-    animation: piscacursor 900ms 5s infinite normal,
-    digita 4s 11s steps(30) normal;
-}
-
-div.line-8{
-    animation: piscacursor 900ms 5s infinite normal,
-    digita 4s 11s steps(30) normal;
-}
-
-div.line-9{
-    animation: piscacursor 900ms 5s infinite normal,
-    digita 4s 11s steps(30) normal;
-}
-
-div.line-10{
-    animation: piscacursor 900ms 5s infinite normal,
-    digita 4s 11s steps(30) normal;
-}
-@keyframes digita{
-   0%{
-        width: 0;
-    }
-    100%{
-        width: 10rem;
-    }
-
-}
-@keyframes piscacursor{
-    from{
-     border-right: 2px solid rgba(255, 255, 255, 0.75); 
-    }
-    to{
-        border-right: transparent;
-    }
-}
-
-@keyframes none-border{
-    0%{
-        border-right: 2px solid #282a36;
-    }
-    100%{
-        border-right: none;
-    }
-}
-
-.contatos{
-    border: none /*solid 2px #f1b;*/;
-    width: 2.5rem;
-    height: 2.5rem;
-    margin: 0.15rem;
-    color: #f1b;
-    font-weight: 1000;
-    font-size: 1.5rem;
-    background-color: black;
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3), 0 0 7px #f1b;
-    box-shadow: inset 0 0 3px #f1b, 0 0 3px #f1b;
+.contatos {
+  border: none /*solid 2px #f1b;*/;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin: 0.15rem;
+  color: #f1b;
+  font-weight: 1000;
+  font-size: 1.5rem;
+  background-color: black;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3), 0 0 7px #f1b;
+  box-shadow: inset 0 0 3px #f1b, 0 0 3px #f1b;
 }
