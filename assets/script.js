@@ -8,7 +8,9 @@ function alterabody() {
 
   setTimeout(() => {
     telainicial.style.display = "flex";
+     alteraWidth(); //chamar aqui pra começar só quando redenrizar
   }, 9991);
+ 
 }
 
 function alteraWidth() {
@@ -74,8 +76,6 @@ function alteraWidth() {
     linha12.style.width = "9.5rem";
   }, 46000);
 }
-
-alteraWidth();
 
 alterabody();
 
