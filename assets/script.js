@@ -4,11 +4,11 @@ function alterabody() {
 
   setTimeout(() => {
     animationNeon.style.display = "none";
-  }, 00001);
+  }, 9900);
 
   setTimeout(() => {
     telainicial.style.display = "flex";
-  }, 00001);
+  }, 9991);
 }
 
 function alteraWidth() {
@@ -22,46 +22,57 @@ function alteraWidth() {
   let linha8 = document.querySelector(".line-8");
   let linha9 = document.querySelector(".line-9");
   let linha10 = document.querySelector(".line-10");
+  let linha11 = document.querySelector(".line-11");
+  let linha12 = document.querySelector(".line-12");
 
   setTimeout(() => {
     linha1.style.width = "9.5rem";
+    linha2.style.border = "right: 2px solid rgba(255, 255, 255, 0.75);";
   }, 4101);
 
   setTimeout(() => {
-    linha2.style.width = "10";
-  }, 8201);
+    linha2.style.width = "9.7rem";
+  }, 7501);
 
   setTimeout(() => {
-    linha3.style.width = "9.5rem";
-  }, 6000);
+    linha3.style.width = "10rem";
+  }, 11102);
 
   setTimeout(() => {
-    linha4.style.width = "9.5rem";
-  }, 6000);
+    linha4.style.width = "5rem";
+  }, 14000);
 
   setTimeout(() => {
-    linha5.style.width = "9.5rem";
-  }, 6000);
+    linha5.style.width = "11rem";
+  }, 18000);
 
   setTimeout(() => {
-    linha6.style.width = "9.5rem";
-  }, 6000);
+    linha6.style.width = "8rem";
+  }, 22000);
 
   setTimeout(() => {
     linha7.style.width = "9.5rem";
-  }, 6000);
+  }, 26000);
 
   setTimeout(() => {
     linha8.style.width = "9.5rem";
-  }, 6000);
+  }, 30000);
 
   setTimeout(() => {
     linha9.style.width = "9.5rem";
-  }, 6000);
+  }, 34000);
 
   setTimeout(() => {
     linha10.style.width = "9.5rem";
-  }, 6000);
+  }, 38000);
+
+  setTimeout(() => {
+    linha11.style.width = "10rem";
+  }, 42000);
+
+  setTimeout(() => {
+    linha12.style.width = "9.5rem";
+  }, 46000);
 }
 
 alteraWidth();
