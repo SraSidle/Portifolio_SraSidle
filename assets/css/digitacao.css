@@ -1,0 +1,152 @@
+.anima{
+    background-color: #282a36;
+}
+
+.pink{
+    color: #ff79c6;
+}
+
+.green-italic{
+   color: #50fa7b;
+   font-family: italic;
+}
+
+.yellow{
+    color: #f1fa8c;
+}
+
+.red{
+    color: #ff5555;
+}
+
+.purple{
+    color: #bd93f9;
+}
+
+.orange{
+    color: #ffb86c
+}
+
+.cyan{
+    color: #8be9fd;
+}
+
+.coment{
+    color: #6272a4;
+}
+
+.white{
+    color: #f8f8f2;
+}
+
+.courent-line{
+    color: #44475a;
+}
+
+div.line-1,
+div.line-2,
+div.line-3,
+div.line-4,
+div.line-5,
+div.line-6,
+div.line-7,
+div.line-8,
+div.line-9,
+div.line-10{
+    width:0;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid rgba(255, 255, 255, 0.75);
+}
+
+div.line-1{
+         animation: piscacursor 900ms 5s normal,
+         digita 4s 0.1s steps(30) normal,
+         none-border 100s 6s normal ;
+}
+
+div.line-2{
+    animation: piscacursor 900ms 5s infinite normal,
+    digita 4s 4.1s steps(30) normal,
+    none-border 100s 6s normal ;
+}
+
+div.line-3{
+    animation: piscacursor 900ms 5s infinite normal,
+    digita 4s 8.2s steps(30) normal,
+    none-border 100s 6s normal ;
+}
+
+div.line-4{
+    animation: piscacursor 900ms 5s infinite normal,
+    digita 4s 12.1s steps(30) normal;
+}
+
+div.line-5{
+    animation: piscacursor 900ms 5s infinite normal,
+    digita 4s 11s steps(30) normal;
+}
+
+div.line-6{
+    animation: piscacursor 900ms 5s infinite normal,
+    digita 4s 11s steps(30) normal;
+}
+
+div.line-7{
+    animation: piscacursor 900ms 5s infinite normal,
+    digita 4s 11s steps(30) normal;
+}
+
+div.line-8{
+    animation: piscacursor 900ms 5s infinite normal,
+    digita 4s 11s steps(30) normal;
+}
+
+div.line-9{
+    animation: piscacursor 900ms 5s infinite normal,
+    digita 4s 11s steps(30) normal;
+}
+
+div.line-10{
+    animation: piscacursor 900ms 5s infinite normal,
+    digita 4s 11s steps(30) normal;
+}
+@keyframes digita{
+   0%{
+        width: 0;
+    }
+    100%{
+        width: 10rem;
+    }
+
+}
+@keyframes piscacursor{
+    from{
+     border-right: 2px solid rgba(255, 255, 255, 0.75); 
+    }
+    to{
+        border-right: transparent;
+    }
+}
+
+@keyframes none-border{
+    0%{
+        border-right: 2px solid #282a36;
+    }
+    100%{
+        border-right: none;
+    }
+}
+
+.contatos{
+    border: none /*solid 2px #f1b;*/;
+    width: 2.5rem;
+    height: 2.5rem;
+    margin: 0.15rem;
+    color: #f1b;
+    font-weight: 1000;
+    font-size: 1.5rem;
+    background-color: black;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3), 0 0 7px #f1b;
+    box-shadow: inset 0 0 3px #f1b, 0 0 3px #f1b;
+}
