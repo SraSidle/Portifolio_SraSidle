@@ -4,6 +4,12 @@ em outros arquivos css
 2-animação de digitar na secção de serviços, está no arquivo "digitacao.css"
 3-mini-rocket foi uma adaptação para caber no card de serviços "mini_rocket.css"
 $-por enquanto, desconsiderar o rocket.css*/
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body {
   background-color: rgb(10, 10, 10);
   width: 100vw;
@@ -94,6 +100,12 @@ a {
   text-decoration: none;
   padding: 0.7rem;
   font-weight: 1rem;
+  transition: ease-in-out 0.5s;
+}
+
+ul > a:hover{
+  color:#770f59;
+  transform: scale(0.98);
 }
 /*meu nome, profissão, botão ancorado à section contatos e foto de perfil*/
 .apresentacao {
@@ -118,7 +130,7 @@ button.contato {
   font-size: 0.8rem;
   align-items: center;
   font-weight: 500;
-  transition: ease-in-out 1s;
+  transition: ease-in-out 0.5s;
   background-color: #770f59;
 }
 
@@ -151,10 +163,11 @@ button.contato:hover {
 .foto {
   width: 13rem;
   border-radius: 50%;
+  border: solid 2px gray;
 }
 
 .sobre-eu {
-  margin: 5% 15%;
+  margin: 0 15%;
   padding: 1rem;
 }
 /*Esse h3 está estilizando todos os títulos das sections*/
@@ -165,7 +178,7 @@ h3 {
 }
 /*Estilização da section contatos*/
 #meus-contatos {
-  margin: 5% 15%;
+  margin: 2% 15%;
   padding: 1rem;
 }
 .meus__contatos {
@@ -227,7 +240,7 @@ h3 {
     #defe47,
     rgba(255, 0, 234, 0.5) 100%
   );
-  animation: rotate 5s infinite ease-in-out;
+  animation: rotate 7s infinite ease-in-out;
 }
 
 .corner {
@@ -249,6 +262,7 @@ h3 {
   justify-content: space-around;
   align-items: center;
   border: 2px solid #de0d9c;
+  border-radius: 0.5rem;
 }
 .card {
   transition: ease-in-out 1s;
@@ -310,6 +324,7 @@ img.card {
   height: 20rem;
   padding: 1rem;
   margin: 0.7rem;
+  border-radius: 0.5rem;
 }
 
 .nome-servico {
@@ -322,6 +337,8 @@ img.card {
   height: 16rem;
   background-color: #fff;
   color: black;
+  border-radius: 0.5rem;
+  box-shadow: 2px 2px 2px 2px rgba(255, 255, 255, 0.15);
 }
 
 .representacao__CRUD > p {
@@ -330,6 +347,7 @@ img.card {
   font-size: 1rem;
   font-weight: 600;
 }
+
 .methods {
   width: 90%;
   height: 3rem;
@@ -408,7 +426,7 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgb(255, 255, 255, 0.1);
+  background-color: #282a36;
 }
 
 .footer {
@@ -418,6 +436,6 @@ footer {
 
 .footer:hover {
   text-decoration: underline;
-  color: #f1b;
+  color:  #770f59;
   cursor: pointer;
 }
