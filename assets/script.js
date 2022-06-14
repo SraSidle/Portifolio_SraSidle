@@ -29,11 +29,11 @@ function alteraWidth() {
 
   setTimeout(() => {
     linha1.style.width = "9.5rem";
-    linha2.style.border = "right: 2px solid rgba(255, 255, 255, 0.75);";
+   // linha2.style.border = "right: 2px solid rgba(255, 255, 255, 0.75);";
   }, 4101);
 
   setTimeout(() => {
-    linha2.style.width = "9.7rem";
+    linha2.style.width = "11rem";
   }, 7501);
 
   setTimeout(() => {
@@ -45,7 +45,7 @@ function alteraWidth() {
   }, 14000);
 
   setTimeout(() => {
-    linha5.style.width = "11rem";
+    linha5.style.width = "12rem";
   }, 18000);
 
   setTimeout(() => {
@@ -69,7 +69,7 @@ function alteraWidth() {
   }, 38000);
 
   setTimeout(() => {
-    linha11.style.width = "10rem";
+    linha11.style.width = "11.5rem";
   }, 42000);
 
   setTimeout(() => {
