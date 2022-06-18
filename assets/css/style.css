@@ -12,9 +12,10 @@ $-por enquanto, desconsiderar o rocket.css*/
 }
 body {
   background-color: rgb(10, 10, 10);
-  width: 100vw;
+  width: 98vw;
   height: 100vh;
   color: rgb(216, 200, 212);
+  overflow-x: hidden; /*footer deu problema, jeito mais eficiente*/
 }
 
 /*adaptações para tamanhos de tela diferentes*/
@@ -32,22 +33,34 @@ body {
   }
 }
 
-@media only screen and(max-width: 385px) {
+@media(max-width: 400px) {
   .container {
-    width: 270px;
-    height: 350px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin: 2rem;
+    align-items: center;
+    width: 250px;
+    height: 300px;
+    overflow: hidden;
   }
-  .corner {
-    width: 246px;
-    height: 296px;
-  }
-
   .content {
-    width: 215px;
-    height: 275px;
+    width: 240px;
+    height: 280px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border: 2px solid #de0d9c;
+    border-radius: 0.5rem;
   }
-  .card {
-    width: 10rem;
+  img.card {
+    transition: ease-in-out 1s;
+    width: 12rem;
+  }
+  .card:hover {
+    transform: scale(1.1);
   }
 }
 
@@ -55,15 +68,16 @@ body {
 .home {
   display: none;
   flex-direction: column;
+  align-items: center;
   width: 100%;
-  height: 100%;
+  margin: 0;
 }
 
 header {
   display: flex;
   flex-direction: column;
   width: 100%;
-  padding: 1rem 3rem;
+  /* padding: 1rem 3rem; */
 }
 
 nav {
@@ -130,14 +144,14 @@ button.contato {
   font-size: 0.8rem;
   align-items: center;
   font-weight: 500;
-  transition: ease-in-out 0.5s;
-  background-color: #770f59;
+  transition: ease-in-out 0.7s;
+  background-color: #9e1577;
 }
 
 button.contato:hover {
   background-color: #b3fa48d7;
   font-weight: 500;
-  font-size: 0.85rem;
+  font-size: 0.825rem;
   color: rgb(0, 0, 0);
 }
 
@@ -163,23 +177,28 @@ button.contato:hover {
 .foto {
   width: 13rem;
   border-radius: 50%;
-  border: solid 2px gray;
+  border-top: solid 1px #b4fa48;
+  border-left: solid 1px #defe47;
+  border-bottom: solid 1px #de0d9c;
+  border-right: solid 1px #d22dfc;
 }
 
 .sobre-eu {
-  margin: 0 15%;
+  width: 80%;
+  /* margin: 0 10%; */
   padding: 1rem;
 }
 /*Esse h3 está estilizando todos os títulos das sections*/
 h3 {
   text-align: center;
-  margin-bottom: 0.7rem;
+  margin-bottom: 1rem;
   color: #f1b;
 }
 /*Estilização da section contatos*/
 #meus-contatos {
-  margin: 2% 15%;
-  padding: 1rem;
+  width: 80%;
+  margin: 2% 0;
+  padding: 1rem; 
 }
 .meus__contatos {
   display: flex;
@@ -212,63 +231,94 @@ h3 {
 }
 
 /*Configuração das bordas animadas*/
-.container {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  margin: 2rem;
-  align-items: center;
-  width: 300px;
-  height: 350px;
-  overflow: hidden;
-}
-
-@keyframes rotate {
-  100% {
-    transform: rotate(360deg);
+@media (min-width: 400px){
+  .container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin: 2rem;
+    align-items: center;
+    width: 300px;
+    height: 350px;
+    overflow: hidden;
   }
-}
-
-.animated-border {
-  width: 600px;
-  height: 250px;
-  margin-bottom: 1rem;
-  position: absolute;
-  background-image: radial-gradient(
-    farthest-corner at 40px 40px,
-    #50c5ee 40%,
-    #defe47,
-    rgba(255, 0, 234, 0.5) 100%
-  );
-  animation: rotate 7s infinite ease-in-out;
-}
-
-.corner {
-  width: 296px;
-  height: 346px;
-  background: rgb(10, 10, 10);
-  z-index: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.content {
-  width: 265px;
-  height: 315px;
-  z-index: 2;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  border: 2px solid #de0d9c;
-  border-radius: 0.5rem;
-}
-.card {
-  transition: ease-in-out 1s;
-}
-.card:hover {
-  transform: scale(1.4);
+  
+  @keyframes rotate {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .animated-border {
+    width: 600px;
+    height: 250px;
+    margin-bottom: 1rem;
+    position: absolute;
+    background-image: radial-gradient(
+      farthest-corner at 40px 40px,
+      #50c5ee 40%,
+      #defe47,
+      rgba(255, 0, 234, 0.5) 100%
+    );
+    animation: rotate 7s infinite ease-in-out;
+  }
+  
+  .corner {
+    width: 296px;
+    height: 346px;
+    background: rgb(10, 10, 10);
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .content {
+    width: 265px;
+    height: 315px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border: 2px solid #de0d9c;
+    border-radius: 0.5rem;
+  }
+  .card {
+    transition: ease-in-out 1s;
+  }
+  .card:hover {
+    transform: scale(1.4);
+  } 
+  /*section projetos, as animações presentes neles, estão estilizadas em outros arquivos css */
+  
+  #projetos{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .container-projects {
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .card-project {
+    background-color: rgb(255, 255, 255, 0.1);
+    padding: 1rem;
+    margin: 2rem;
+    width: 15rem;
+    height: 20rem;
+  }
+  
+  .card-project > img,
+  img.card {
+    width: 13rem;
+    height: 8rem;
+  }  
 }
 
 .content > a {
@@ -288,30 +338,13 @@ h3 {
   text-align: center;
 }
 
-/*section projetos, as animações presentes neles, estão estilizadas em outros arquivos css */
-.container-projects {
-  padding: 1rem;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-}
-
-.card-project {
-  background-color: rgb(255, 255, 255, 0.1);
-  padding: 1rem;
-  margin: 2rem;
-  width: 15rem;
-  height: 20rem;
-}
-
-.card-project > img,
-img.card {
-  width: 13rem;
-  height: 8rem;
-}
 /*section de serviços*/
+#servicos{
+  width: 80%;
+  margin: 0 10%;
+}
 .row-servicos {
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -405,7 +438,8 @@ img.card {
 /*section das imagens das tecnologias que utilizo*/
 #skills {
   padding: 1rem;
-  margin: 5% 10%;
+  margin: 5% 0;
+  width: 80%;
 }
 
 .row-skills {
@@ -421,7 +455,7 @@ img.card {
 }
 /*rodapé com meus créditos e meu nome ancorado ao linkedin*/
 footer {
-  width: 100%;
+  width: 100vw;
   height: 5rem;
   display: flex;
   align-items: center;
