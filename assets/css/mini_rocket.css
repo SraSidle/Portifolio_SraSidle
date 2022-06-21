@@ -1,4 +1,5 @@
 .scene {
+  display: flex;
   position: relative;
   width: 100%;
   height: 16rem;
@@ -9,7 +10,7 @@
   align-items: center;
   transition: ease-in-out 1s;
   box-shadow: 2px 2px 2px 2px rgba(255, 255, 255, 0.10);
-  z-index: 2;
+  z-index: 1;
   border-radius: 0.5rem;
 }
 
@@ -89,20 +90,6 @@ i {
   height: 60px;
   background: linear-gradient(#00d0ff, transparent);
   filter: blur(20px);
-}
-
-.scene:hover{
-  background-color: #00000060;
-  width: 100vw;
-  height: 90vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 9999;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow-y: auto;
 }
 
 .foto-foguete {
