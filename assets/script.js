@@ -4,12 +4,12 @@ function alterabody() {
 
   setTimeout(() => {
     animationNeon.style.display = "none";
-  }, 9900);
+  }, 0001);//9900
 
   setTimeout(() => {
     telainicial.style.display = "flex";
      alteraWidth(); //chamar aqui pra começar só quando redenrizar
-  }, 9991);
+  }, 0002) ;//9991)
  
 }
 
@@ -111,3 +111,79 @@ function stars() {
 }
 
 stars();
+
+//Início da configuração, das animações
+
+//biblioteca Lodash => function debounce (controle da execução das animações)
+const debounce = function (func, wait, immediate) {
+  let timeout;
+  return function (...args) {
+    const context = this;
+    const later = function () {
+      timeout = null;
+      if (!immediate) func.apply(context, args);
+    };
+    const callNow = immediate && !timeout;
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+    if (callNow) func.apply(context, args);
+  };
+};
+
+const target = document.querySelectorAll("[data-anime]");
+const animationClass = "animate";
+
+function animeScroll() {
+  const windowTop = window.pageYOffset + (window.innerHeight * 3) / 4;
+  target.forEach(function (element) {
+    if (windowTop > element.offsetTop) {
+      element.classList.add(animationClass);
+    } else {
+      element.classList.remove(animationClass);
+    }
+  });
+}
+
+if (target.length) {
+  window.addEventListener(
+    "scroll",
+    debounce(function () {
+      animeScroll();
+    }, 200)
+  );
+}
+
+let scene = document.querySelector(".scene");
+let servico = document.querySelector("#servico-3")
+
+scene.addEventListener("click", function () {
+
+  scene.style = (`
+    background-color: #00000060;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto;
+  `)
+  
+  setTimeout(() => {
+    scene.style = ` position: relative;
+    width: 100%;
+    height: 16rem;
+    background: #01070a;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: ease-in-out 1s;
+    box-shadow: 2px 2px 2px 2px rgba(255, 255, 255, 0.10);
+    z-index: 2;
+    border-radius: 0.5rem;`;
+  }, 7000);
+});
