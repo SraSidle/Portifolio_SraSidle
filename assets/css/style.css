@@ -339,6 +339,24 @@ h3 {
 }
 
 /*section de serviços*/
+[data-anime]{
+  opacity: 0;
+  transition: .6s;
+}
+
+[data-anime="bottom"] {
+  transform: translate3d(0, 20vh, 0);
+}
+
+[data-anime="top"]{
+  transform: translate3d(0, -20vh, 0);
+}
+
+[data-anime].animate{
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
 #servicos{
   width: 80%;
   margin: 0 10%;
